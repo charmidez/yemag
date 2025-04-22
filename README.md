@@ -1,2 +1,2 @@
 # yemag
-I build YEMAG website with NextJ and Django
+I build YEMAG website with NextJS and Django
