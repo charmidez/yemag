@@ -1,11 +1,13 @@
-import Navbar from "@/components/ui/navbar"
 
-function contact() {
+
+function Contact() {
     return(
         <>
-        <Navbar className="bg-fuchsia-600" />
+        <div>
+            COntact
+        </div>
         </>
     )
 }
 
-export default contact
+export default Contact

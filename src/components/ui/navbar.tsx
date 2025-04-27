@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Menucss from "./menucss";
+
 type NavbarProps = {
   className: string;
 };
@@ -6,7 +9,7 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
     <>
 
-        <div className={`navbar shadow-2xl ${className}`}>
+        <div className={`navbar ${className}`}>
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -53,22 +56,23 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
                 </li>
               </ul>
             </div>
-            <a className="btn btn-ghost text-xl">daisyUI</a>
+            <img src="/images/logo.png" alt="logo de Yemag" className="h-30 w-30 border-mine-white p-4 bg-mine-white rounded-xl shadow-xl" />
           </div>
-          <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1">
-              <li>
-              <a href="/index">Index</a>
+
+          <div className="navbar-center hidden lg:flex justify-around">
+            <ul className="menu menu-horizontal px-1 font-semibold">
+              <li className="px-2">
+              <Menucss linkMine="/" nameMenuMine="Accueil"></Menucss>
               </li>
               <li>
                 <details>
-                  <summary>Parent</summary>
+                  <summary className="font-normal">Yemag Institut</summary>
                   <ul className="p-2">
                     <li>
-                      <a>Submenu 1</a>
+                      <Menucss linkMine="/yemag-institut/presentation" nameMenuMine="Présentation"></Menucss>
                     </li>
                     <li>
-                      <a>Submenu 2</a>
+                      <a>Administration et corps enseignant</a>
                     </li>
                   </ul>
                 </details>
