@@ -5,8 +5,8 @@ type NavbarProps = {
 const Navbar: React.FC<NavbarProps> = ({ className }) => {
   return (
     <>
-      <div className={className}>
-        <div className="navbar shadow-sm">
+
+        <div className={`navbar shadow-2xl ${className}`}>
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -82,7 +82,6 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
             <a className="btn">Button</a>
           </div>
         </div>
-      </div>
     </>
   );
 };
