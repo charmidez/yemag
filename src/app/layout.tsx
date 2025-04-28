@@ -8,7 +8,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <head>
         {/* Favicon */}
         <link rel="icon" href="/fav.ico" type="image/x-icon" />

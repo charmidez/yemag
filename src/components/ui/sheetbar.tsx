@@ -19,16 +19,16 @@ const Sheetbar: React.FC<SheetbarProps> = ({ className }) => {
         <div className="flex flex-row justify-start items-center gap-4">
           <a
             href="#"
-            className="text-lg font-medium text-mine-red flex flex-row items-center gap-2 border-2 border-mine-white bg-mine-white rounded-xl px-2"
+            className="text-lg font-medium text-mine-red flex flex-row items-center gap-2 border-2 border-mine-white bg-mine-white rounded-lg px-2"
           >
             <img src="/images/germany.svg" className="h-5 w-5" alt="Deutch" />
             Deutsch
           </a>
           <a
             href="#"
-            className="text-lg font-medium text-mine-red flex flex-row items-center gap-2 border-2 border-mine-white bg-mine-white rounded-xl px-2"
+            className="text-lg font-medium text-mine-red flex flex-row items-center gap-2 border-2 border-mine-white bg-mine-white rounded-lg px-2"
           >
-            <img src="/images/french.svg" className="h-5 w-5" alt="French" />{" "}
+            <img src="/images/french.svg" className="h-5 w-5" alt="French" />
             Français
           </a>
         </div>

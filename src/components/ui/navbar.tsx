@@ -1,5 +1,7 @@
-import Link from "next/link";
-import Menucss from "./menucss";
+//import Link from "next/link";
+//import Menucss from "./menucss";
+import NavbarCenter from "./navbarcenter";
+import SearchBar from "./searchbar";
 
 type NavbarProps = {
   className: string;
@@ -60,30 +62,11 @@ const Navbar: React.FC<NavbarProps> = ({ className }) => {
           </div>
 
           <div className="navbar-center hidden lg:flex justify-around">
-            <ul className="menu menu-horizontal px-1 font-semibold">
-              <li className="px-2">
-              <Menucss linkMine="/" nameMenuMine="Accueil"></Menucss>
-              </li>
-              <li>
-                <details>
-                  <summary className="font-normal">Yemag Institut</summary>
-                  <ul className="p-2">
-                    <li>
-                      <Menucss linkMine="/yemag-institut/presentation" nameMenuMine="Présentation"></Menucss>
-                    </li>
-                    <li>
-                      <a>Administration et corps enseignant</a>
-                    </li>
-                  </ul>
-                </details>
-              </li>
-              <li>
-              <a href="/contact">Contact</a>
-              </li>
-            </ul>
+            <NavbarCenter />
           </div>
-          <div className="navbar-end">
-            <a className="btn">Button</a>
+
+          <div className="navbar-end flex flex-row justify-end items-center gap-4">
+            <SearchBar />
           </div>
         </div>
     </>
