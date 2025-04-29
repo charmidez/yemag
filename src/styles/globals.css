@@ -76,16 +76,20 @@
   --color-mine-white : #ffffff;
 
   --color-mine-red : #E51D1B;
+  --color-mine-bordeau : #750302;
   --color-mine-redlight : #fce8e8;
 
 
-  --color-mine-yellow : #FFE400
+  --color-mine-yellow : #FFE400;
+  --color-mine-opacitymine : #fff;
+
   --font-display : 'Montserrat';
 
+  --radius-mine-rounded : 25px;
+  --radius-mine-sub-rounded : 15px;
+  --radius-mine-little-rounded : 5px;
+
 }
-
-
-
 
 :root {
   --background: #ffffff;

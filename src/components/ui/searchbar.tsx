@@ -27,7 +27,7 @@ function SearchBar() {
       {/* Barre de recherche pleine page */}
       {isOpen && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-red-900 opacity-75 flex justify-center items-center transition-all duration-300 ease-in-out z-40"
+          className="fixed top-0 left-0 w-full h-full bg-red-900 flex justify-center items-center transition-all duration-3000 ease-in-out z-40"
           onClick={handleToggle}
         >
           <div

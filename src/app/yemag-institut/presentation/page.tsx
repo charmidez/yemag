@@ -7,7 +7,7 @@ const descDeutch = "Bei YEMAG glauben wir fest an die Bedeutung von Engagement, 
 function Presentation() {
     return(
         <>
-        <Titrepage titre="Presentation" description={desc} descriptionDeutsch={descDeutch} className="px-16 py-26 bg-[url('/images/presentationtitre.jpg')]" />
+        <Titrepage titre="Presentation" description={desc} descriptionDeutsch={descDeutch} className="bg-[url('/images/presentationtitre.jpg')]" />
         </>
     )
     
