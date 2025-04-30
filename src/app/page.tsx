@@ -11,7 +11,7 @@ function Home() {
         {/* Section 1 vidéo */}
         <Autoplayvideo srcMine="/videos/yemag_video.mp4" />
         {/* Actualité */}
-        <div className="flex flex-col p-16">
+        <div className="flex flex-col p-16 bg-mine-gray">
             <Titresection titre="Actualités" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Données et liste à récupérer depuis la base de données avec le composant carte*/}

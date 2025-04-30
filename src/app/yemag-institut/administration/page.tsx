@@ -1,16 +1,25 @@
-import Titrepage from "@/components/ui/titrepage"
+import Titrepage from "@/components/ui/titrepage";
 
-const desc = "YEMAG est une école de langue qui vise à être une référence international dans l'enseignement de la langue allemande avec un environnement d'apprentissage exceptionnel."
-const descDeutch = "Bei YEMAG glauben wir fest an die Bedeutung von Engagement, aktiver Teilnahme und Zusammenarbeit."
+const titre = "Administration & Corps enseignant";
+const desc =
+  "À YEMAG, nous croyons fermement en l'importance de l'engagement, de la participation active et de la collaboration.";
+const descDeutch =
+  "YEMAG, Sprachschule, strebt danach, weltweit eine Referenz im Sprachunterricht zu sein und bietet dabei eine außergewöhnliche Lernumgebung.";
 
-
+{
+  /*ADMINISTRATION & CORPS ENSEIGNANT*/
+}
 function Administration() {
-    return(
-        <>
-        <Titrepage titre="Administration" description={desc} descriptionDeutsch={descDeutch} className="bg-[url('/images/presentationtitre.jpg')]" />
-        </>
-    )
-    
+  return (
+    <>
+      <Titrepage
+        titre={titre}
+        description={desc}
+        descriptionDeutsch={descDeutch}
+        className="bg-[url('/images/administration.jpg')] bg-cover bg-fixed"
+      />
+    </>
+  );
 }
 
-export default Administration
+export default Administration;

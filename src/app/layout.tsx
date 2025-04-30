@@ -1,7 +1,8 @@
+import Footer from "@/components/ui/footer";
 import "../styles/globals.css";
 import Navbar from "@/components/ui/navbar";
 import Sheetbar from "@/components/ui/sheetbar";
-import Link from "next/link";
+//import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -23,7 +24,9 @@ export default function RootLayout({
 
         <main>{children}</main>
 
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );

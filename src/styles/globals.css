@@ -83,11 +83,15 @@
   --color-mine-yellow : #FFE400;
   --color-mine-opacitymine : #fff;
 
+  --color-mine-gray : #FCFCFC;
+
   --font-display : 'Montserrat';
 
   --radius-mine-rounded : 25px;
   --radius-mine-sub-rounded : 15px;
   --radius-mine-little-rounded : 5px;
+
+  --text-mine-footer : 10px
 
 }
 
