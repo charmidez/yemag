@@ -5,7 +5,7 @@ type AutoplayvideoProps = {
 const Autoplayvideo = ( {srcMine}: AutoplayvideoProps) => {
   return (
     <>
-      <video  autoPlay muted loop playsInline src={srcMine}>
+      <video  autoPlay muted loop playsInline src={srcMine} className="">
         Votre navigateur ne peut lire cette vidéo
       </video>
     </>

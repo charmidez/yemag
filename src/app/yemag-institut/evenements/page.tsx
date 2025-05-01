@@ -11,7 +11,7 @@ function Evenements() {
         titre="Grands Évenements"
         description={desc}
         descriptionDeutsch={descDeutch}
-        className="bg-[url('/images/presentationtitre.jpg')]"
+        className="bg-[url('/images/evenements.jpg')] bg-center"
       >
         <Link href="/" className="btn bg-mine-red text-mine-white rounded-mine-little-rounded w-full">Toute l'Actualité</Link>
       </Titrepage>

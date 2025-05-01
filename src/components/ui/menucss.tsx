@@ -10,7 +10,7 @@ const Menucss = ({ linkMine, nameMenuMine }: MenucssProps) => {
   return (
     <>
     <Link
-        className={`hover:underline hover:text-mine-red hover:bg-mine-redlight active:scale-95 transition transform active:underline active:text-mine-red active:font-black px-8 active:bg-mine-redlight`}
+        className={`hover:underline`}
         href={linkMine}>
         {nameMenuMine}
       </Link>

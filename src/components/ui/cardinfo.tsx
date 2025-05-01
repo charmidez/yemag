@@ -10,7 +10,7 @@ type CardinfoProps = {
 const Cardinfo = ({ titreCard, descCard, image, linkInfo }: CardinfoProps) => {
   return(
     
-    <div className=" card shadow-2xl rounded-mine-rounded">
+    <div className=" card shadow-xl rounded-mine-rounded bg-mine-white">
         <figure>
             <img src={image} alt={titreCard} className="object-cover h-48 w-full" />
         </figure>

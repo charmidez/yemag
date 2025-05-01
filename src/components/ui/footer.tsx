@@ -18,7 +18,7 @@ const Footer = () => {
             </div>
 
             <div className="flex flex-row justify-between">
-            <div className="flex flex-row gap-8">
+            <div className="flex flex-row gap-8 items-end">
             <ul className=" font-semibold">
                  <li>F.A.Q</li>
                  <li>Inscription</li>
@@ -27,22 +27,20 @@ const Footer = () => {
                  <li>Terms et conditions</li>
                 </ul>
 
-                <ul className=" font-semibold">
-                 <li>F.A.Q</li>
-                 <li>Inscription</li>
-                 <li>Contact et addresse</li>
-                 <li>Mention légales</li>
-                 <li>Terms et conditions</li>
+                <ul className=" font-semibold lg:pl-30">
+                 <li>Au Togo</li>
+                 <li>Au Bénin</li>
+                 <li>En Allemagne</li>
                 </ul>
             </div>
 
 
                 <ul className=" font-semibold">
                  <li className="flex flex-row gap-2"><img src="/images/phone_simple.svg" className="w-5"/> +228 70 41 72 55</li>
-                 <li>Inscription</li>
-                 <li>Contact et addresse</li>
-                 <li>Mention légales</li>
-                 <li>Terms et conditions</li>
+                 <li className="flex flex-row gap-2"><img src="/images/phone_simple.svg" className="w-5"/> +229 45 91 53 90</li>
+                 <li className="flex flex-row gap-2"><img src="/images/phone_simple.svg" className="w-5"/> +49 157 331 359 94</li>
+                 <li className="flex flex-row gap-2"><img src="/images/envelope.svg" className="w-5"/>contact@yemag-uni.com</li>
+                 <li>Lomé - Sokodé - Kara - Cotonou</li>
                 </ul>
             </div>
         </div>
