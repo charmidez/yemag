@@ -3,9 +3,20 @@ import Cardcolor from "@/components/ui/cardcolor";
 import Cardinfo from "@/components/ui/cardinfo";
 import Titresection from "@/components/ui/titresection";
 
+const cardTitre1 =
+  "Partenariat avec l'Université de Lomé - Département Allemand de la Faculté des Lettres, Langues et Arts";
+const cardText1 =
+  "YEMAG est fier d’annoncer son partenariat avec le Département Allemand de l’Université de Lomé. Ce partenariat renforce les liens académiques et offre aux étudiants l’opportunité d’enrichir leur parcours éducatif. Les YEMAGUISTES bénéficieront d’un accès aux ressources académiques et aux programmes d’échange, tout en développant leurs compétences linguistiques et leur compréhension de la culture allemande.";
+
+const cardTitre2 =
+  "Partenariat entre YEMAG et le Lycée de Tokoin - Renforcement des Liens Éducatifs sur le plan lingustique";
+const cardText2 =
+  "YEMAG se réjouit de son partenariat avec le Lycée de Tokoin, témoignant d’un engagement accru pour le renforcement des liens éducatifs, notamment dans le domaine linguistique. Cette collaboration permet aux YEMAGUISTES de bénéficier d’un accès élargi à des ressources pédagogiques de qualité et à des programmes d’échange linguistique, favorisant ainsi le développement de leurs compétences en allemand et leur immersion culturelle.";
+
 function Home() {
   return (
     <div>
+      <title>YEMAG - Acceuil</title>
       <div className="flex flex-col">
         {/* Section 1 vidéo */}
         <Autoplayvideo srcMine="/videos/yemag_video.mp4" />
@@ -75,12 +86,55 @@ function Home() {
 
         {/*Pourquoi choisir YEMAG*/}
         <div className="flex flex-col bg-mine-redlight">
-          <Titresection titre="Pourquoi choisir YEMAG" className="pt-16 px-16"/>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            <img src="/images/presentationtitre.jpg" className="object-cover" />
+          <Titresection
+            titre="Pourquoi choisir YEMAG"
+            className="pt-16 px-16"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <img src="/images/presentationtitre.jpg" className="" />
             <img src="/images/presentationtitre.jpg" className="object-cover" />
             <img src="/images/presentationtitre.jpg" className="object-cover" />
           </div>
+        </div>
+
+        {/* Yemag et partenariats */}
+        <div className="flex flex-col p-16">
+          <Titresection titre="YEMAG et partenariat" />
+
+          <div className="grid grid-rows-1 lg:grid-cols-2 gap-4 lg:gap-8">
+            {/*Université de lomé*/}
+            <div className="card items-center justify-center bg-gray-100 rounded-mine-carre p-4 gap-4">
+              <img
+                src="/images/UnivLome.png"
+                alt="presentation"
+                className="w-full rounded-mine-carre"
+              />
+              <div className="card-body p-0">
+                <h2 className="font-bold text-xl card-title justify-center">
+                  {cardTitre1}
+                </h2>
+                <p className="">{cardText1}</p>
+              </div>
+            </div>
+            {/*Lycéé de tokoin*/}
+            <div className="card items-center justify-center bg-gray-100 rounded-mine-carre p-4 gap-4">
+              <img
+                src="/images/Lytoko.png"
+                alt="presentation"
+                className="w-full rounded-mine-carre"
+              />
+              <div className="card-body p-0">
+                <h2 className="font-bold text-xl card-title justify-center">
+                  {cardTitre2}
+                </h2>
+                <p className="">{cardText2}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col bg-mine-redlight">
+          <Titresection titre="YEMAG Institut et Voyage en chiffres"/>
         </div>
       </div>
     </div>

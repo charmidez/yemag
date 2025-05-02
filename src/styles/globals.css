@@ -91,6 +91,8 @@
   --radius-mine-sub-rounded : 15px;
   --radius-mine-little-rounded : 5px;
 
+  --radius-mine-carre : 0px;
+
   --text-mine-footer : 10px
 
 }
@@ -112,4 +114,10 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+
+
+video {
+  pointer-events: none;
 }
