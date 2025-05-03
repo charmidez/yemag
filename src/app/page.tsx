@@ -17,6 +17,7 @@ function Home() {
   return (
     <div>
       <title>YEMAG - Acceuil</title>
+
       <div className="flex flex-col">
         {/* Section 1 vidéo */}
         <Autoplayvideo srcMine="/videos/yemag_video.mp4" />
@@ -133,8 +134,52 @@ function Home() {
           </div>
         </div>
 
-        <div className="flex flex-col bg-mine-redlight">
-          <Titresection titre="YEMAG Institut et Voyage en chiffres"/>
+        {/*YEMAG EN CHIFFRES*/}
+        <div className="flex flex-col bg-mine-redlight p-16">
+          <Titresection titre="YEMAG Institut et Voyage en chiffres" />
+          <div className="grid lg:grid-cols-4 sm:grid-cols-1 gap-8 bg-mine-gray p-8 rounded-mine-rounded">
+            <div className="justify-center items-center flex flex-col gap-2">
+              <h2 className="text-8xl font-bold">+450</h2>
+              <p className="text-xl font-light">Étudiants</p>
+            </div>
+            <div className="justify-center items-center flex flex-col gap-2">
+              <h2 className="text-8xl font-bold">+50</h2>
+              <p className="text-xl font-light">Pédagogues</p>
+            </div>
+            <div className="justify-center items-center flex flex-col gap-2">
+              <h2 className="text-8xl font-bold">+5</h2>
+              <p className="text-xl font-light">Centres de formations</p>
+            </div>
+            <div className="justify-center items-center flex flex-col gap-2">
+              <h2 className="text-8xl font-bold">+50</h2>
+              <p className="text-xl font-light">Départs chaque année</p>
+            </div>
+          </div>
+        </div>
+
+        {/*News Letters*/}
+        <div className="bg-red-300 border-t-8 border-mine-red justify-center items-center flex flex-row p-16">
+          <div className="card w-100 bg-red-400 rounded-mine-rounded  shadow-2xl">
+
+            <div className="card-body">
+              <h2 className="text-mine-white font-bold text-2xl">Boostez votre savoir-faire dès aujourd'hui : Recevez nos conseils exclusifs en vous abonnant à notre newsletter !</h2>
+              <input type="Prénon & Nom" className="input w-full"/>
+              <input type="Prénon & Nom" className="input w-full"/>
+              <button className="btn w-full text-mine-red ">S'enregistrer</button>
+            </div>
+          </div>
+        </div>
+
+        {/*Card*/}
+        <div className="p-16 flex flex-row items-center justify-center">
+          <div className="card lg:card-side bg bg-mine-redlight rounded-mine-little-rounded">
+          <img src="/images/presentationtitre.jpg" alt="Logo" className="w-65 lg:rounded-tl-mine-little-rounded lg:rounded-bl-mine-little-rounded "/>
+            <div className="card-body">
+              <h1 className="text-xl font-bold">Candidature et inscription</h1>
+              <p className="font-semibold">Si vous envisagez de postuler à YEMAG, et de partir pour l'Allemagne, vous êtes à la place idéale.</p>
+              <button className="btn rounded-mine-rounded bg-gray-700 text-mine-white">EN SAVOIR PLUS</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

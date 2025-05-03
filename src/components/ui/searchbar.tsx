@@ -3,7 +3,9 @@
 
 import { useState } from "react";
 
-function SearchBar() {
+export function OthersSearchBar(){}
+
+export default function SearchBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
@@ -51,5 +53,3 @@ function SearchBar() {
     </div>
   );
 }
-
-export default SearchBar;
