@@ -1,29 +1,29 @@
 import Breadcrumb from "@/components/breadcumbs";
 import Titrepage from "@/components/ui/titrepage";
-import { data_presentation } from "@/app/yemag-institut/presentation/contents";
+import {
+  titrePage,
+  desc,
+  descDeutch,
+  data_presentation,
+} from "@/app/yemag-institut/presentation/contents";
 import Quote from "@/components/ui/quotes";
 import Titresection from "@/components/ui/titresection";
-
-const desc =
-  "YEMAG est une école de langue qui vise à être une référence international dans l'enseignement de la langue allemande avec un environnement d'apprentissage exceptionnel.";
-const descDeutch =
-  "Bei YEMAG glauben wir fest an die Bedeutung von Engagement, aktiver Teilnahme und Zusammenarbeit.";
+import { Gallerie } from "@/components/ui/gallerie";
+import { Cardsimple } from "@/components/ui/cardsimple";
 
 function Presentation() {
-  let index = 0;
-  const isEven = index % 2 === 0;
   return (
     <>
       <title>YEMAG - Présentation</title>
       <Titrepage
-        titre="Presentation"
+        titre={titrePage}
         description={desc}
         descriptionDeutsch={descDeutch}
         className="bg-[url('/images/presentationtitre.jpg')] bg-cover bg-fixed"
       />
 
       {/*Breadcrumb*/}
-      <div className="px-16 py-2">
+      <div className="px-16 py-2 lg:px-64">
         <Breadcrumb />
       </div>
 
@@ -32,9 +32,12 @@ function Presentation() {
         {data_presentation.map((item, index) => (
           <div
             key={index}
-            className={` ${index % 2 === 0 ? "bg-gray-100" : ""} ${
-              item.id == "quote" ? "bg-mine-white" : ""
-            }  px-16 py-8`}
+            className={` 
+            ${index % 2 === 0 ? "bg-gray-100" : ""} 
+            ${item.id == "quote" ? "bg-mine-white" : ""}
+            ${item.id == "avenir" ? "flex flex-col gap-8" : ""}
+            
+            px-16 py-8 lg:px-64`}
           >
             {item.quote && <Quote>{item.quote}</Quote>}
             {item.titre && (
@@ -46,6 +49,16 @@ function Presentation() {
                 </div>
               </div>
             )}
+            {item.imgSrc && <Gallerie srcImg={item.imgSrc} />}
+            {item.card && (
+                <Cardsimple
+                  titreCard={item.card.titre}
+                  descPargrCard={item.card.paragraphe}
+                  imgSrc={item.card.imgSrc}
+                  button={item.card.button}
+                />
+              )}
+            
           </div>
         ))}
       </section>

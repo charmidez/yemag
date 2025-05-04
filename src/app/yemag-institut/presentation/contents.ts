@@ -1,6 +1,10 @@
 // Ce document contient des informations sur le contenu de la page presentation
 
-import { i } from "motion/react-client";
+export const titrePage = "Présentation";
+export const desc =
+  "YEMAG est une école de langue qui vise à être une référence international dans l'enseignement de la langue allemande avec un environnement d'apprentissage exceptionnel.";
+export const descDeutch =
+  "Bei YEMAG glauben wir fest an die Bedeutung von Engagement, aktiver Teilnahme und Zusammenarbeit.";
 
 export const data_presentation = [
   {
@@ -33,9 +37,22 @@ export const data_presentation = [
         couvrant divers types de visas, de l’éducation à l’emploi qualifié.`,
   },
   {
-    id:"images",
-    titre:"YEMAG en image",
-    imgSrc : []
+    id: "images",
+    titre: "YEMAG en image",
+    imgSrc: [
+      "/images/A1.jpg",
+      "/images/A2.jpg",
+      "/images/A6.jpg",
+      "/images/A1.jpg",
+      "/images/A2.jpg",
+      "/images/A6.jpg",
+      "/images/A1.jpg",
+      "/images/A2.jpg",
+      "/images/A6.jpg",
+      "/images/A1.jpg",
+      "/images/A2.jpg",
+      "/images/A6.jpg",
+    ],
   },
   {
     id: "avenir",
@@ -43,14 +60,17 @@ export const data_presentation = [
     paragraphe_1: `Chez YEMAG, nous croyons en la création d’opportunités. Après avoir terminé votre formation, vous serez prêts non seulement à maîtriser la langue allemande, 
         mais aussi à vous intégrer avec succès dans le marché du travail allemand. 
         Nous collaborons avec des partenaires locaux pour vous offrir des opportunités professionnelles adaptées à vos compétences et à vos aspirations.`,
-  },
-  {
-    id: "choix",
-    titre: "Pourquoi Choisir YEMAG ?",
-    liste_1: ` Approche Pédagogique Innovante : Des cours interactifs et dynamiques pour faciliter l'apprentissage.`,
-    liste_2: `Assistance Complète pour le Visa : Un soutien dédié pour simplifier le processus d'immigration.`,
-    liste_3: `Intégration Professionnelle : Des opportunités de carrière adaptées à vos compétences et ambitions.`,
-    paragraphe_final: `Rejoignez YEMAG aujourd'hui et ouvrez la porte à de nouvelles possibilités en apprenant la langue allemande 
-        et en lançant votre parcours vers une vie enrichissante en Allemagne.`
+    card: {
+      titre: "Pourquoi Choisir YEMAG ?",
+      imgSrc : "/images/learn1.jpg",
+      paragraphe : [
+        ` + Approche Pédagogique Innovante : Des cours interactifs et dynamiques pour faciliter l'apprentissage.`,
+        ` + Assistance Complète pour le Visa : Un soutien dédié pour simplifier le processus d'immigration.`,
+        ` + Intégration Professionnelle : Des opportunités de carrière adaptées à vos compétences et ambitions.`,
+        `Rejoignez YEMAG aujourd'hui et ouvrez la porte à de nouvelles possibilités en apprenant la langue allemande 
+          et en lançant votre parcours vers une vie enrichissante en Allemagne.`
+      ],
+      button:"M'inscrire"
+    }
   },
 ];

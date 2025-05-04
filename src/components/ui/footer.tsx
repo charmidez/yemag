@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
     return(
         <>
-        <div className="flex flex-col px-16 py-32 bg-[url('/images/footer.png')] bg-cover bg-fixed gap-4">
+        <div className="flex flex-col px-16 lg:px-64 py-32 bg-[url('/images/footer.png')] bg-cover bg-fixed gap-4">
             <div className="flex flex-row justify-between">
                 <img src="/images/logo.png" alt="logo" className="p-4 bg-mine-white w-40 border-0 rounded-mine-rounded shadow-2xl bg-cover bg-fixed "/>
 

@@ -5,7 +5,7 @@ type TitresectionProps = {
 
 const Titresection = ({ titre, className }: TitresectionProps) => {
   return (
-    <h2 className={`text-mine-bordeau lg:text-3xl md:text-md text-sm font-semibold uppercase pb-8 ${className} `}>
+    <h2 className={`text-mine-bordeau lg:text-3xl md:text-2xl text-xl font-semibold uppercase lg:pb-4 pb-2 ${className} `}>
       {titre}
     </h2>
   );
