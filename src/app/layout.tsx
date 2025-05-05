@@ -18,8 +18,8 @@ export default function RootLayout({
       </head>
       <body>
         <header>
-          <Sheetbar className="px-16 py-2 lg:px-64" />
-          <Navbar className="bg-mine-white px-16 py-2 lg:px-64" />
+          <Sheetbar className="px-4 lg:py-2 py-2 lg:px-64" />
+          <Navbar className="bg-mine-white px-4 py-2 lg:px-64" />
         </header>
 
         <main>{children}</main>

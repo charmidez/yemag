@@ -1,69 +1,81 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
 import Menucss from "./menucss";
 
-function NavbarCenter() {
-  // Refs pour chaque menu
-  const institutRef = useRef<HTMLDetailsElement>(null);
-  const formationRef = useRef<HTMLDetailsElement>(null);
-  const voyagesRef = useRef<HTMLDetailsElement>(null);
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
-  // States d'ouverture par menu
-  const [openInstitut, setOpenInstitut] = useState(false);
-  const [openFormation, setOpenFormation] = useState(false);
-  const [openVoyages, setOpenVoyages] = useState(false);
+export default function Menumobile() {
 
-  const pathname = usePathname();
-
-  useEffect(() => {
-    // À chaque changement de page : fermer tous les menus
-    institutRef.current?.open && (institutRef.current.open = false);
-    formationRef.current?.open && (formationRef.current.open = false);
-    voyagesRef.current?.open && (voyagesRef.current.open = false);
-
-    setOpenInstitut(false);
-    setOpenFormation(false);
-    setOpenVoyages(false);
-  }, [pathname]);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        institutRef.current &&
-        !institutRef.current.contains(event.target as Node)
-      ) {
-        institutRef.current.open = false;
-        setOpenInstitut(false);
+    // Refs pour chaque menu
+    const institutRef = useRef<HTMLDetailsElement>(null);
+    const formationRef = useRef<HTMLDetailsElement>(null);
+    const voyagesRef = useRef<HTMLDetailsElement>(null);
+  
+    // States d'ouverture par menu
+    const [openInstitut, setOpenInstitut] = useState(false);
+    const [openFormation, setOpenFormation] = useState(false);
+    const [openVoyages, setOpenVoyages] = useState(false);
+  
+    const pathname = usePathname();
+  
+    useEffect(() => {
+      // À chaque changement de page : fermer tous les menus
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      institutRef.current?.open && (institutRef.current.open = false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      formationRef.current?.open && (formationRef.current.open = false);
+      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+      voyagesRef.current?.open && (voyagesRef.current.open = false);
+  
+      setOpenInstitut(false);
+      setOpenFormation(false);
+      setOpenVoyages(false);
+    }, [pathname]);
+  
+    useEffect(() => {
+      function handleClickOutside(event: MouseEvent) {
+        if (
+          institutRef.current &&
+          !institutRef.current.contains(event.target as Node)
+        ) {
+          institutRef.current.open = false;
+          setOpenInstitut(false);
+        }
+        if (
+          formationRef.current &&
+          !formationRef.current.contains(event.target as Node)
+        ) {
+          formationRef.current.open = false;
+          setOpenFormation(false);
+        }
+        if (
+          voyagesRef.current &&
+          !voyagesRef.current.contains(event.target as Node)
+        ) {
+          voyagesRef.current.open = false;
+          setOpenVoyages(false);
+        }
       }
-      if (
-        formationRef.current &&
-        !formationRef.current.contains(event.target as Node)
-      ) {
-        formationRef.current.open = false;
-        setOpenFormation(false);
-      }
-      if (
-        voyagesRef.current &&
-        !voyagesRef.current.contains(event.target as Node)
-      ) {
-        voyagesRef.current.open = false;
-        setOpenVoyages(false);
-      }
-    }
-
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+  
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
 
   return (
-    <div className="navbar-center hidden lg:flex justify-around">
-      <ul className="menu menu-horizontal px-1 font-semibold">
-
-        {/* MENU : ACCUEIL */}
+    <>
+      <div className="dropdown dropdown-end">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden bg-mine-redlight">
+          <Image src={"/images/menu0.webp"} width={100} height={100} alt="menu" className="w-5 h-5"  />
+        </div>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content rounded-box bg-mine-white z-1 mt-3 w-52 p-2 shadow"
+        >
+          {/* MENU : ACCUEIL */}
         <li className="px-1">
           <Menucss linkMine="/" nameMenuMine="Accueil" />
         </li>
@@ -72,7 +84,7 @@ function NavbarCenter() {
         <li className="px-1">
           <details ref={institutRef}>
             <summary
-              className="font-normal px-8"
+              className="font-normal"
               onClick={() => setOpenInstitut((prev) => !prev)}
             >
               Yemag Institut
@@ -99,7 +111,7 @@ function NavbarCenter() {
         <li className="px-1">
           <details ref={formationRef}>
             <summary
-              className="font-normal px-8"
+              className="font-normal"
               onClick={() => setOpenFormation((prev) => !prev)}
             >
               Formation
@@ -126,7 +138,7 @@ function NavbarCenter() {
         <li className="px-1">
           <details ref={voyagesRef}>
             <summary
-              className="font-normal px-8"
+              className="font-normal"
               onClick={() => setOpenVoyages((prev) => !prev)}
             >
               Voyages
@@ -150,10 +162,8 @@ function NavbarCenter() {
         <li className="px-1">
           <Menucss linkMine="/contact" nameMenuMine="Contact" />
         </li>
-
-      </ul>
-    </div>
+        </ul>
+      </div>
+    </>
   );
 }
-
-export default NavbarCenter;
