@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export function OthersSearchBar(){}
 
@@ -19,7 +20,9 @@ export default function SearchBar() {
         onClick={handleToggle}
         className="p-2 border-mine-red border-2 bg-mine-red rounded-full hover:shadow-lg"
       >
-        <img
+        <Image
+          width={}
+          height={}
           src="/images/search.svg"
           alt="Search"
           className="h-4 w-4"
