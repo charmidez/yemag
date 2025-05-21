@@ -21,8 +21,8 @@ export default function SearchBar() {
         className="p-2 border-mine-red border-2 bg-mine-red rounded-full hover:shadow-lg"
       >
         <Image
-          width={}
-          height={}
+          width={100}
+          height={100}
           src="/images/search.svg"
           alt="Search"
           className="h-4 w-4"
