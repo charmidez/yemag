@@ -178,13 +178,13 @@ function Home() {
           <div className="card w-100 bg-red-400 rounded-mine-rounded  shadow-2xl">
             <div className="card-body">
               <h2 className="text-mine-white font-bold text-2xl">
-                Boostez votre savoir-faire dès aujourd'hui : Recevez nos
+                Boostez votre savoir-faire dès aujourd &apos hui : Recevez nos
                 conseils exclusifs en vous abonnant à notre newsletter !
               </h2>
               <input type="Prénon & Nom" className="input w-full" />
               <input type="Prénon & Nom" className="input w-full" />
               <button className="btn w-full text-mine-red ">
-                S'enregistrer
+                S&aposenregistrer
               </button>
             </div>
           </div>

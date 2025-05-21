@@ -13,7 +13,7 @@ function Evenements() {
         descriptionDeutsch={descDeutch}
         className="bg-[url('/images/evenements.jpg')] bg-center"
       >
-        <Link href="/" className="btn bg-mine-red text-mine-white rounded-mine-little-rounded w-full">Toute l'Actualité</Link>
+        <Link href="/" className="btn bg-mine-red text-mine-white rounded-mine-little-rounded w-full">Toute l&aposActualité</Link>
       </Titrepage>
     </>
   );

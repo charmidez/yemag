@@ -19,9 +19,20 @@ function NavbarCenter() {
 
   useEffect(() => {
     // À chaque changement de page : fermer tous les menus
-    institutRef.current?.open && (institutRef.current.open = false);
-    formationRef.current?.open && (formationRef.current.open = false);
-    voyagesRef.current?.open && (voyagesRef.current.open = false);
+    //institutRef.current?.open && (institutRef.current.open = false);
+    //formationRef.current?.open && (formationRef.current.open = false);
+    //voyagesRef.current?.open && (voyagesRef.current.open = false);
+
+    if (institutRef.current?.open) {
+  institutRef.current.open = false;
+}
+if (formationRef.current?.open) {
+  formationRef.current.open = false;
+}
+if (voyagesRef.current?.open) {
+  voyagesRef.current.open = false;
+}
+
 
     setOpenInstitut(false);
     setOpenFormation(false);
