@@ -8,6 +8,6 @@ const nextConfig: NextConfig = {
   assetPrefix: '/out/'
 };
 
-module.exports = nextConfig;
+//module.exports = nextConfig;
 
 export default nextConfig;
